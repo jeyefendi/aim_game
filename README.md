@@ -15,5 +15,5 @@
   
 </b>
 
-# [LIVE DEMO](https://codepen.io/jeyefendi/pen/OJELPRm)
+# [LIVE DEMO](https://codepen.io/jeyefendi/pen/BaVBWmw)
 ![Logo](/src/COVER.png)
