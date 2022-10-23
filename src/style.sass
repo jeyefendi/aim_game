@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Khula&display=swap")
+$blue: #16d9e3
+$bg-board: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%)
+$bg-circle: linear-gradient(90deg, $blue 0%, #30c7ec 47%, #46aef7 100%)
+$bg-screen: linear-gradient(90deg, #29323c 0%, #485563 100%)
+
+%flex-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,dd,ol,ul,
+form,fieldset,legend,
+table,th,td,caption,
+hr
+    box-sizing: border-box
+
+body
+    color: #fff
+    font-family: "Khula", sans-serif
+    height: 100vh
+    overflow: hidden
+    margin: 0
+    text-align: center
+
+a
+    color: #fff
+    text-decoration: none
+    &:hover
+        color: $blue
+
+.start
+    font-size: 1.5rem
+
+h1
+    line-height: 1.4
+    font-size: 4rem
+
+.screen
+    @extend %flex-center
+    flex-direction: column
+    height: 100vh
+    width: 100vw
+    transition: margin 0.5s ease-out
+    background: $bg-screen
+    &.up
+        margin-top: -100vh
+
+.time-list
+    @extend %flex-center
+    flex-wrap: wrap
+    list-style: none
+    padding: 0
+    li
+        margin: 10px
+
+.time-btn
+    background-color: transparent
+    border: 2px solid #c0c0c0
+    color: #fff
+    cursor: pointer
+    font-family: inherit
+    padding: 0.5rem 1rem
+    font-size: 1.5rem
+    &:hover
+        border: 2px solid $blue
+        color: $blue
+
+.hide
+    opacity: 0
+
+.primary
+    color: $blue
+
+.board
+    @extend %flex-center
+    position: relative
+    width: 500px
+    height: 500px
+    background: $bg-board
+    box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462
+    border-radius: 30px
+    overflow: hidden
+
+.circle
+    background: $bg-circle
+    position: absolute
+    border-radius: 50%
+    cursor: pointer
